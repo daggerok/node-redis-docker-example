@@ -1,0 +1,24 @@
+{
+  "name": "node-redis-docker-example",
+  "version": "1.0.0",
+  "description": "node redis docker app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo run npm start",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "redis",
+    "docker"
+  ],
+  "author": "Maksim Kostromin <daggerok@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "4.16.0",
+    "@types/node": "10.12.1",
+    "@types/redis": "2.8.7",
+    "express": "4.16.4",
+    "redis": "2.8.0"
+  }
+}

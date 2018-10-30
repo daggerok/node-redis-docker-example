@@ -1,0 +1,9 @@
+node_modules
+.idea
+*.iml
+*.ipr
+*.iws
+*.log*
+.DS_Store
+docker-compose.yaml
+Dockerfile
