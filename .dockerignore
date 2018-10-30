@@ -1,13 +1,3 @@
-node_modules
-.idea
-*.iml
-*.ipr
-*.iws
-*.log*
-.DS_Store
-docker-compose.yaml
-Dockerfile
-README.adoc
-.gitignore
-.travis.yml
-.dockerignore
+**
+!index.js
+!package*.json
