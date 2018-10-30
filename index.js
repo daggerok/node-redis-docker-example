@@ -7,7 +7,7 @@ const key = 'counter';
 client.set(key, 0);
 
 const app = express();
-app.get('/health/**', (req, res) =>
+app.get('/health**', (req, res) =>
   res.send(JSON.stringify({ status: 'UP' }))
 );
 app.get('/', (req, res) => {
