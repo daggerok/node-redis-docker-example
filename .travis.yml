@@ -1,8 +1,5 @@
 service:
   - docker
-language: java
-jdk: oraclejdk8
-node_js: lts/*
 addons:
   apt:
     packages:
@@ -19,7 +16,7 @@ before_install:
 - source <(curl -s https://raw.githubusercontent.com/daggerok/bash-functions/master/main.bash)
 - stop_any 3000 6379
 script:
-- docker-compose up -V --build
+- docker-compose up -V --build &
 - while [[ $(docker ps -n 2 --quiet --filter health=healthy --filter status=running | wc -l) -lt 2 ]] ; do
     echo -ne '.' ;
     sleep 1s ;

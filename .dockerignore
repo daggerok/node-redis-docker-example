@@ -7,3 +7,7 @@ node_modules
 .DS_Store
 docker-compose.yaml
 Dockerfile
+README.adoc
+.gitignore
+.travis.yml
+.dockerignore
