@@ -10,7 +10,7 @@ const app = express();
 app.get('/health**', (req, res) =>
   res.send(JSON.stringify({ status: 'UP' }))
 );
-app.get('/', (req, res) => {
+app.get('/**', (req, res) => {
   client.get(key, (err, reply) => {
     if (err) {
       return res.send(JSON.stringify({
