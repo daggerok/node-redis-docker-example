@@ -14,17 +14,17 @@ install: true
 before_install:
 - sudo pip install docker-compose httpie >/dev/null 2>&1
 - source <(curl -s https://raw.githubusercontent.com/daggerok/bash-functions/master/main.bash)
-- stop_any 3000 6379
+- stop_any 80 3000 6379
 script:
 - docker-compose up -V --build &
-- while [[ $(docker ps -n 2 --quiet --filter health=healthy --filter status=running | wc -l) -lt 2 ]] ; do
+- while [[ $(docker ps -n 3 --quiet --filter health=healthy --filter status=running | wc -l) -lt 3 ]] ; do
     echo -ne '.' ;
     sleep 1s ;
   done
-- http :3000
-- http :3000
+- http :80
+- http :80
 - sleep 1s
-- http :3000
+- http :80
 - docker-compose down -v --rmi local || true
 cache:
   packages: true

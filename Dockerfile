@@ -1,9 +1,9 @@
-FROM node:alpine
-HEALTHCHECK --timeout=1s --retries=66 \
+FROM node:10.13.0-alpine
+HEALTHCHECK --timeout=1s --retries=99 \
         CMD wget -q --spider http://127.0.0.1:3000/health \
          || exit 1
 WORKDIR /src/app
-COPY package.json package-lock.json ./
+COPY package.* .
 RUN npm i && npm cache clean --force
-COPY ./ ./
+COPY index.js .
 CMD npm start
